@@ -79,42 +79,34 @@ public class Main {
             for (int j = 0; j < 3; j++) {
                 // Check each row
                 if (output[i][0] == output[i][1] && output[i][0] == output[i][2]) {
-                    if(output[i][0] == ' '){
-                        break;
-                    } else {
+                    if (output[i][0] != ' ') {
                         System.out.println(output[i][0] + " wins!");
                         System.exit(0);
                         winner = true;
-                        break;
                     }
+                    break;
                 }
                 // Check each column
                 else if (output[0][j] == output[1][j] && output[0][j] == output[2][j]) {
-                    if(output[0][j] == ' '){
-                        break;
-                    } else {
+                    if (output[0][j] != ' ') {
                         System.out.println(output[0][j] + " wins!");
                         System.exit(0);
                         winner = true;
-                        break;
                     }
+                    break;
                 }
             }
         }
         // Check Diagonals
         if (output[0][0] == output[1][1] && output[0][0] == output[2][2]) {
-            if (output[0][0] == ' ') {
-                winner = false;
-            } else {
+            if (output[0][0] != ' ') {
                 System.out.println(output[0][0] + " wins!");
                 System.exit(0);
                 winner = true;
             }
 
         } else if (output[2][0] == output[1][1] && output[2][0] == output[0][2]) {
-            if (output[2][0] == ' ') {
-                winner = false;
-            } else {
+            if (output[2][0] != ' ') {
                 System.out.println(output[2][0] + " wins!");
                 System.exit(0);
                 winner = true;
