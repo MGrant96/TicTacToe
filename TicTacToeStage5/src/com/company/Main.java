@@ -15,7 +15,6 @@ public class Main {
         // print the game board
         printField();
         do {
-
             userInput();
             printField();
             if (totalMovesPlaced > 4){
